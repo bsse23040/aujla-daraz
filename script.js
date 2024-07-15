@@ -132,8 +132,6 @@ async function displayAlbums() {
 
 // main function
 async function main() {
-    songs = await getSongs('musics/Karan_Aujla');
-    playMusic(songs[0], true);
     // Display the list of all the songs
     displayAlbums();
 
