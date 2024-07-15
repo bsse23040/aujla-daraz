@@ -84,7 +84,7 @@ const playMusic = (track, pause = false) => {
     if (!pause) {
         currentSong.play();
     }
-    document.getElementById("play-wrapper").innerHTML = `<lord-icon style="position:relative; scale:1.2; bottom: 2px;" src="https://cdn.lordicon.com/jctchmfs.json" trigger="hover" colors="primary:#ffffff" style="width:33px;height:33px"></lord-icon>`;
+    document.getElementById("play-wrapper").innerHTML = ``;
     document.querySelector(".songinfo").innerHTML = decodeURI(track);
     document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
 
@@ -144,7 +144,7 @@ async function main() {
     playWrapper.addEventListener("click", () => {
         if (currentSong.paused) {
             currentSong.play();
-            playWrapper.innerHTML = `<lord-icon style="posision:relative; scale:1.2; bottom: 2px;" src="https://cdn.lordicon.com/jctchmfs.json" trigger="hover" colors="primary:#ffffff" style="width:33px;height:33px"></lord-icon>`;
+            playWrapper.innerHTML = ``;
         } else {
             currentSong.pause();
             playWrapper.innerHTML = `<img id="play" src="assets/svgs/play.svg" alt="play">`;
@@ -158,7 +158,7 @@ async function main() {
         if (event.code === 'Space') {
             if (currentSong.paused) {
                 currentSong.play();
-                playWrapper.innerHTML = `<lord-icon style="posision:relative; scale:1.2; bottom: 2px;" src="https://cdn.lordicon.com/jctchmfs.json" trigger="hover" colors="primary:#ffffff" style="width:33px;height:33px"></lord-icon>`;
+                playWrapper.innerHTML = ``;
             } else {
                 currentSong.pause();
                 playWrapper.innerHTML = `<img id="play" src="assets/svgs/play.svg" alt="play">`;
